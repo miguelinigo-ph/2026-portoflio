@@ -285,3 +285,13 @@ footer a{text-decoration:none}
   .works-grid>h2{font-size:28px}
 }
 
+
+/* Explicit separators between profile sections */
+.profile-section-start{
+  border-top:1px solid var(--line);
+  padding-top:10px;
+}
+.profile-section-start + .content{
+  border-top:1px solid var(--line);
+  padding-top:10px;
+}
