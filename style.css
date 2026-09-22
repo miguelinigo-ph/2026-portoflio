@@ -221,9 +221,17 @@ nav a{text-decoration:none}
 .spacer-line{height:20px;line-height:20px}
 .profile-divider{
   grid-column:1 / -1;
-  height:0;
-  border-top:1px solid var(--line);
+  height:1px;
   width:100%;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:10px;
+}
+.profile-divider::before,
+.profile-divider::after{
+  content:"";
+  display:block;
+  border-top:1px solid var(--line);
 }
 .profile-grid>*{min-width:0}
 
