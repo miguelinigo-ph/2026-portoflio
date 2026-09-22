@@ -15,10 +15,10 @@ a{color:inherit}
 .brand-mark{font-size:11px}
 nav{grid-column:2/5;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:29px;font-size:14px;font-weight:600;line-height:20px}
 nav a{text-decoration:none}
-.layout{position:fixed;top:34px;right:0;bottom:0;left:0;display:grid;grid-template-columns:66.2% 33.8%;overflow:hidden}
-.main-column,.profile-column{min-height:0;height:100%;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;overscroll-behavior:contain}
-.main-column{padding:10px}
-.profile-column{padding:10px 10px 10px;border-left:1px solid var(--line)}
+.layout{position:fixed;inset:34px 0 0 0;overflow:hidden}
+.main-column,.profile-column{position:fixed;top:34px;bottom:0;height:auto;overflow-y:scroll;overflow-x:hidden;scrollbar-width:thin;overscroll-behavior:contain;min-height:0}
+.main-column{left:0;width:66.2%;padding:10px}
+.profile-column{right:0;width:33.8%;padding:10px 10px 10px;border-left:1px solid var(--line)}
 .hero{padding-top:55px}
 .eyebrow{font-size:clamp(42px,4.4vw,63px);line-height:.86;margin:0 0 29px;letter-spacing:-2.2px}
 .logo-lockup{display:flex;align-items:flex-end;gap:29px;height:133px;margin-bottom:10px}
@@ -58,9 +58,9 @@ h1{font-size:clamp(25px,2.3vw,32px);line-height:28px;letter-spacing:-1px;margin:
 footer{display:flex;justify-content:space-between;padding:18px 10px 24px;border-top:1px solid var(--line);font-size:11px;margin-top:20px}
 footer a{text-decoration:none}
 @media(max-width:900px){
-  .layout{display:block;position:static;height:auto;overflow:visible}
+  .layout{position:static;display:block;height:auto;overflow:visible}
   body{overflow:auto}
-  .main-column,.profile-column{height:auto;min-height:0;overflow:visible}
+  .main-column,.profile-column{position:static;width:auto;height:auto;min-height:0;overflow:visible}
   .main-column{padding-top:44px}
   .profile-column{padding-top:30px;border-left:0;border-top:1px solid var(--line)}
   .hero{padding-top:45px}
