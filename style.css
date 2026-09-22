@@ -284,3 +284,10 @@ footer a{text-decoration:none}
   .works-grid{gap:18px}
   .works-grid>h2{font-size:28px}
 }
+
+/* Education section divider */
+.education-label,
+.education-content{
+  border-top:1px solid var(--line);
+  padding-top:10px;
+}
