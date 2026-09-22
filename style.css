@@ -6,17 +6,19 @@
   --gap:29px;
 }
 *{box-sizing:border-box}
+html,body{width:100%;height:100%;margin:0}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Monument Grotesk","Helvetica Neue",Arial,sans-serif;font-size:11px;line-height:14px;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:"Monument Grotesk","Helvetica Neue",Arial,sans-serif;font-size:11px;line-height:14px;-webkit-font-smoothing:antialiased;overflow:hidden}
 a{color:inherit}
 .site-header{position:fixed;z-index:20;top:0;left:0;width:100%;height:34px;padding:7px 10px;background:rgba(245,245,245,.96);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center}
 .brand{display:flex;gap:7px;align-items:center;text-decoration:none;font-size:14px;font-weight:600;line-height:20px}
 .brand-mark{font-size:11px}
 nav{grid-column:2/5;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:29px;font-size:14px;font-weight:600;line-height:20px}
 nav a{text-decoration:none}
-.layout{display:grid;grid-template-columns:66.2% 33.8%;height:100vh;overflow:hidden}
-.main-column{padding:10px;overflow-y:auto;overflow-x:hidden;height:100vh;scrollbar-width:thin}
-.profile-column{padding:44px 10px 10px;border-left:1px solid var(--line);height:100vh;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
+.layout{position:fixed;top:34px;right:0;bottom:0;left:0;display:grid;grid-template-columns:66.2% 33.8%;overflow:hidden}
+.main-column,.profile-column{min-height:0;height:100%;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;overscroll-behavior:contain}
+.main-column{padding:10px}
+.profile-column{padding:10px 10px 10px;border-left:1px solid var(--line)}
 .hero{padding-top:55px}
 .eyebrow{font-size:clamp(42px,4.4vw,63px);line-height:.86;margin:0 0 29px;letter-spacing:-2.2px}
 .logo-lockup{display:flex;align-items:flex-end;gap:29px;height:133px;margin-bottom:10px}
@@ -56,11 +58,11 @@ h1{font-size:clamp(25px,2.3vw,32px);line-height:28px;letter-spacing:-1px;margin:
 footer{display:flex;justify-content:space-between;padding:18px 10px 24px;border-top:1px solid var(--line);font-size:11px;margin-top:20px}
 footer a{text-decoration:none}
 @media(max-width:900px){
-  .site-header{grid-template-columns:1fr 2fr}
-  nav{grid-column:2;gap:12px}
-  .layout{display:block}
-  .main-column{padding-top:34px}
-  .profile-column{padding-top:30px}
+  .layout{display:block;position:static;height:auto;overflow:visible}
+  body{overflow:auto}
+  .main-column,.profile-column{height:auto;min-height:0;overflow:visible}
+  .main-column{padding-top:44px}
+  .profile-column{padding-top:30px;border-left:0;border-top:1px solid var(--line)}
   .hero{padding-top:45px}
   .hero-meta{height:180px}
   .project{grid-template-columns:1fr;gap:14px}
@@ -69,8 +71,8 @@ footer a{text-decoration:none}
 }
 @media(max-width:600px){
   .site-header{height:42px;padding:8px;grid-template-columns:1fr 1.6fr}
-  .brand{font-size:11px}
   nav{font-size:11px;line-height:14px;gap:8px}
+  .brand{font-size:11px}
   .main-column,.profile-column{padding-left:8px;padding-right:8px}
   .eyebrow{font-size:44px;margin-bottom:20px}
   .logo-lockup{height:auto;gap:12px;flex-wrap:wrap;margin-bottom:20px}
