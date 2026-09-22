@@ -37,12 +37,12 @@ a{color:inherit}
 .site-header{
   position:sticky;
   z-index:20;
-  top:0;
+  top:-10px;
   width:calc(100% + 20px);
   height:34px;
   margin:-10px -10px -34px;
   padding:10px;
-  background:rgba(245,245,245,.98);
+  background:var(--bg);
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
   align-items:center;
