@@ -329,9 +329,33 @@ footer a{text-decoration:none}
   .profile-divider{display:none}
 }
 @media(max-width:600px){
-  .site-header{height:42px}
-  .brand{font-size:11px;gap:8px}
-  nav{font-size:11px;line-height:14px;gap:8px}
+  .site-header{
+    height:42px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px;
+  }
+  .brand{
+    flex:0 0 auto;
+    font-size:10px;
+    line-height:14px;
+    gap:6px;
+  }
+  .brand-mark{width:10px;height:10px}
+  nav{
+    flex:1 1 auto;
+    min-width:0;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:6px;
+    font-size:10px;
+    line-height:14px;
+  }
+  nav a{
+    min-width:0;
+    white-space:nowrap;
+  }
   .hero-title{font-size:42px;line-height:30px}
   .hero-heading{font-size:25px;line-height:26px}
   .intro{font-size:17px}
