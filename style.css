@@ -378,11 +378,26 @@ footer a{text-decoration:none}
 .work-image[data-hover-variant] .work-state{
   position:absolute;
   inset:0;
-  transition:opacity .18s ease;
+  transition:opacity .45s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1);
+  will-change:opacity,transform;
 }
-.work-state-hover{opacity:0;pointer-events:none}
-.work-image[data-hover-variant]:hover .work-state-default{opacity:0}
-.work-image[data-hover-variant]:hover .work-state-hover{opacity:1}
+.work-state-default{
+  opacity:1;
+  transform:scale(1);
+}
+.work-state-hover{
+  opacity:0;
+  transform:scale(1.015);
+  pointer-events:none;
+}
+.work-image[data-hover-variant]:hover .work-state-default{
+  opacity:0;
+  transform:scale(.985);
+}
+.work-image[data-hover-variant]:hover .work-state-hover{
+  opacity:1;
+  transform:scale(1);
+}
 .work-01-image .work-state-hover{overflow:hidden}
 .work-01-image .work-state-hover > img:first-child{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
@@ -390,18 +405,25 @@ footer a{text-decoration:none}
 .work-hover-overlay{
   position:absolute;
   background:rgba(14,14,31,.7);
+  transition:opacity .5s cubic-bezier(.22,1,.36,1);
 }
 .work-01-image .work-hover-overlay{
   inset:0;
 }
 .work-hover-mark{
   position:absolute;
+  opacity:0;
+  transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1);
   left:50%;
   top:50%;
   width:359px;
   height:160px;
-  transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%) scale(.96);
   object-fit:contain;
+}
+.work-image[data-hover-variant]:hover .work-hover-mark{
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1);
 }
 .work-02-image .work-state-default,
 .work-02-image .work-state-hover{position:absolute;inset:0}
@@ -423,6 +445,8 @@ footer a{text-decoration:none}
 }
 .work-02-hover-mark{
   position:absolute;
+  opacity:0;
+  transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1);
   left:17.91%;
   top:30.93%;
   width:64.18%;
