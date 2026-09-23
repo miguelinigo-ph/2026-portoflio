@@ -92,7 +92,7 @@ nav a{text-decoration:none}
 .logo-lockup>div:last-child{width:370.26px;height:122.61px;flex:0 0 auto}
 .logo-lockup img{display:block;width:100%;height:100%;object-fit:contain;object-position:left bottom}
 .hero-heading{
-  height:51px;
+  height:46px;
   min-width:100%;
   display:flex;
   align-items:flex-end;
@@ -102,25 +102,29 @@ nav a{text-decoration:none}
   letter-spacing:-.64px;
 }
 .intro{
-  height:27px;
+  height:58px;
   display:flex;
   align-items:flex-end;
   font-size:20px;
-  line-height:16.272px;
+  line-height:24px;
   font-weight:400;
+  max-width:627px;
 }
 .hero-meta{
   height:317px;
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
   gap:29px;
-  padding:1px 0;
+  padding:23px 0 1px;
   font-size:11px;
   line-height:14px;
 }
 .hero-meta p{margin:0}
-.hero-meta p:first-child{grid-column:2}
-.hero-meta p:last-child{grid-column:3}
+.hero-meta strong{display:block;font-size:14px;line-height:20px;font-weight:500}
+.hero-meta p:nth-child(1){grid-column:1}
+.hero-meta p:nth-child(2){grid-column:2}
+.hero-meta p:nth-child(3){grid-column:3}
+.hero-meta p:nth-child(4){grid-column:4}
 
 .works{
   padding-top:43px;
@@ -369,3 +373,68 @@ footer a{text-decoration:none}
 .follow-label{grid-column:1;grid-row:5;margin:0;padding:0;font-family:"Monument Grotesk","Helvetica Neue",Arial,sans-serif;font-size:14px;line-height:20px;font-weight:500;color:#0e0e1f}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;column-gap:0;row-gap:20px}.contact-grid>h2,.contact-kicker,.contact-copy,.contact-form,.follow-label{grid-column:1;grid-row:auto}.contact-form{grid-template-columns:minmax(0,110px) minmax(0,1fr);grid-template-rows:32px 32px 32px 125px 40px}}
 @media(max-width:600px){.contact-form{grid-template-columns:1fr;grid-template-rows:auto auto auto 125px 40px}.form-row label,.form-row input,.form-row textarea,.form-row:nth-child(1) label,.form-row:nth-child(1) input,.form-row:nth-child(2) label,.form-row:nth-child(2) input,.form-row:nth-child(3) label,.form-row:nth-child(3) input,.form-row:nth-child(4) label,.form-row:nth-child(4) textarea{grid-column:1}.form-row{display:contents}.contact-form button{grid-column:1}}
+
+/* Figma thumbnail variants — default to Variant2/New value on hover */
+.work-image[data-hover-variant] .work-state{
+  position:absolute;
+  inset:0;
+  transition:opacity .18s ease;
+}
+.work-state-hover{opacity:0;pointer-events:none}
+.work-image[data-hover-variant]:hover .work-state-default{opacity:0}
+.work-image[data-hover-variant]:hover .work-state-hover{opacity:1}
+.work-01-image .work-state-hover{overflow:hidden}
+.work-01-image .work-state-hover > img:first-child{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+.work-hover-overlay{
+  position:absolute;
+  background:rgba(14,14,31,.7);
+}
+.work-01-image .work-hover-overlay{
+  inset:0;
+}
+.work-hover-mark{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:359px;
+  height:160px;
+  transform:translate(-50%,-50%);
+  object-fit:contain;
+}
+.work-02-image .work-state-default,
+.work-02-image .work-state-hover{position:absolute;inset:0}
+.work-02-hover-thumbnail{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:452px;
+  height:272px;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+}
+.work-02-hover-overlay{
+  left:calc(50% - 220px);
+  top:calc(50% + 5px);
+  width:932px;
+  height:342px;
+  transform:translate(-50%,-50%);
+}
+.work-02-hover-mark{
+  position:absolute;
+  left:17.91%;
+  top:30.93%;
+  width:64.18%;
+  height:38.48%;
+  object-fit:contain;
+}
+.work-02-image .work-state-default > img,
+.work-02-image .work-state-hover > img{pointer-events:none}
+@media(max-width:900px){
+  .hero-meta{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-top:20px}
+}
+@media(max-width:600px){
+  .hero-meta{grid-template-columns:1fr 1fr;height:180px;gap:14px}
+  .hero-meta p:nth-child(1),.hero-meta p:nth-child(2),.hero-meta p:nth-child(3),.hero-meta p:nth-child(4){grid-column:auto}
+}
