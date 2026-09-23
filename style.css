@@ -979,3 +979,21 @@ footer a{text-decoration:none}
   .idyllic-collage .collage-main{width:520px;height:410px}
   .idyllic-wide-collage .collage-main{height:420px;width:237px}
 }
+
+
+.software-icons .software-icon-figma{
+  width:20px;
+  height:20px;
+  display:flex;
+  flex:0 0 20px;
+  align-items:center;
+  justify-content:center;
+  background:#0e0e1f;
+}
+.software-icons .figma-glyph{
+  color:#f5f5f5;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  line-height:1;
+  font-weight:700;
+}
