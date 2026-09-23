@@ -752,3 +752,229 @@ footer a{text-decoration:none}
   .site-header .brand{flex-basis:35%!important;width:35%!important;max-width:35%!important;font-size:8.5px!important}
   .site-header nav{flex-basis:65%!important;font-size:8.5px!important;gap:2px!important}
 }
+
+
+/* IDYLLIC case study */
+.idyllic-page{
+  padding-top:43px;
+  overflow:hidden;
+}
+.idyllic-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-areas:
+    "number title title title"
+    "team meta deliverables scope"
+    "overview hero hero hero"
+    "collage member-copy portrait"
+    "wide wide wide wide"
+    "final identity identity identity";
+  gap:29px;
+  padding-bottom:1px;
+}
+.idyllic-grid h3{
+  margin:0 0 0;
+  color:#0e0e1f;
+  font-size:14px;
+  line-height:20px;
+  font-weight:500;
+}
+.idyllic-grid p{
+  margin:0;
+  color:#0e0e1f;
+  font-size:11px;
+  line-height:14px;
+  font-weight:400;
+}
+.idyllic-number{
+  grid-area:number;
+  font-size:96px;
+  line-height:69px;
+  font-weight:700;
+  letter-spacing:-1.92px;
+  align-self:center;
+}
+.idyllic-title{
+  grid-area:title;
+  align-self:center;
+  min-width:0;
+}
+.idyllic-title strong{
+  display:block;
+  font-size:40px;
+  line-height:28px;
+  font-weight:700;
+  letter-spacing:-.8px;
+}
+.idyllic-title span{
+  display:block;
+  margin-top:8px;
+  font-size:20px;
+  line-height:28px;
+  font-weight:500;
+  letter-spacing:-.4px;
+}
+.idyllic-team{grid-area:team}
+.idyllic-team strong{font-weight:500;color:#0063b2}
+.idyllic-meta{grid-area:meta}
+.idyllic-meta .meta-subhead{margin-top:10px}
+.software-icons{
+  display:flex;
+  align-items:center;
+  gap:2px;
+  margin-top:0;
+}
+.software-icons img{
+  width:20px;
+  height:20px;
+  object-fit:contain;
+  display:block;
+}
+.idyllic-deliverables{grid-area:deliverables}
+.idyllic-scope{grid-area:scope}
+.idyllic-overview{
+  grid-area:overview;
+  min-width:0;
+}
+.idyllic-overview p,
+.idyllic-member-copy p,
+.idyllic-final-copy p,
+.idyllic-identity-copy p{
+  margin-top:10px;
+}
+.idyllic-overview p:first-of-type,
+.idyllic-member-copy p:first-of-type,
+.idyllic-final-copy p:first-of-type,
+.idyllic-identity-copy p:first-of-type{
+  margin-top:0;
+}
+.idyllic-hero-image{
+  grid-area:hero;
+  height:575px;
+  overflow:hidden;
+  background:#f7f7f7;
+}
+.idyllic-hero-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+.idyllic-collage{
+  grid-area:collage;
+  height:264.9px;
+  position:relative;
+  overflow:hidden;
+  background:#f7f7f7;
+}
+.idyllic-collage .collage-bg,
+.idyllic-wide-collage .collage-bg{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:211.83px;
+  height:264.78px;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+}
+.idyllic-collage .collage-main{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:459px;
+  height:367px;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+}
+.idyllic-member-copy{
+  grid-area:member-copy;
+  min-width:0;
+}
+.idyllic-portrait{
+  grid-area:portrait;
+  height:264.48px;
+  overflow:hidden;
+}
+.idyllic-portrait img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+.idyllic-wide-collage{
+  grid-area:wide;
+  height:264.9px;
+  position:relative;
+  overflow:hidden;
+  background:#f7f7f7;
+}
+.idyllic-wide-collage .collage-main{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:228px;
+  height:405px;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+}
+.idyllic-final-copy{
+  grid-area:final;
+  min-width:0;
+}
+.idyllic-identity-copy{
+  grid-area:identity;
+  min-width:0;
+  max-width:100%;
+}
+@media(max-width:900px){
+  .case-main{width:100%!important}
+  .idyllic-page{padding-top:30px}
+  .idyllic-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-areas:
+      "number title"
+      "team meta"
+      "deliverables scope"
+      "overview overview"
+      "hero hero"
+      "collage member-copy"
+      "portrait portrait"
+      "wide wide"
+      "final identity";
+    gap:20px;
+  }
+  .idyllic-title strong{font-size:28px;line-height:26px}
+  .idyllic-title span{font-size:15px;line-height:20px}
+  .idyllic-number{font-size:72px;line-height:60px}
+  .idyllic-hero-image{height:auto;aspect-ratio:692.75/575}
+}
+@media(max-width:600px){
+  .idyllic-grid{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "number"
+      "title"
+      "team"
+      "meta"
+      "deliverables"
+      "scope"
+      "overview"
+      "hero"
+      "collage"
+      "member-copy"
+      "portrait"
+      "wide"
+      "final"
+      "identity";
+    gap:18px;
+  }
+  .idyllic-number{font-size:64px;line-height:54px}
+  .idyllic-title strong{font-size:25px;line-height:25px}
+  .idyllic-title span{font-size:14px;line-height:20px}
+  .idyllic-hero-image{height:auto;aspect-ratio:1.204}
+  .idyllic-collage,.idyllic-portrait,.idyllic-wide-collage{height:300px}
+  .idyllic-collage .collage-main{width:520px;height:410px}
+  .idyllic-wide-collage .collage-main{height:420px;width:237px}
+}
