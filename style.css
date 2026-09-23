@@ -338,9 +338,13 @@ footer a{text-decoration:none}
   .logo-lockup img{height:auto;max-height:none}
   .hero-meta{height:180px}
   .works-grid{grid-template-columns:1fr;grid-template-rows:auto;gap:20px}
-  .works-grid>h2,.works-intro,.project-copy-left,.project-copy-right,.project-copy-bottom,.project-media,.media-left,.media-right,.media-second.media-left,.media-second.media-right{grid-column:1;grid-row:auto}
-  .project-media{height:170px}
-  .project-copy-right,.project-copy-bottom{display:none}
+  .works-grid>h2,.works-intro,.work-card{grid-column:1;grid-row:auto}
+  .work-card{margin-top:0!important;height:auto}
+  .work-image,.work-01 .work-image,.work-04 .work-image,.work-05 .work-image,.work-06 .work-image{height:220px}
+  .work-02-image{height:220px}
+  .work-02-vector{max-width:none}
+  .work-02-thumbnail{width:100%;height:220px!important}
+  .work-card>a{margin-top:0}
   .profile-grid{grid-template-columns:1fr;grid-template-rows:auto;gap:10px}
   .profile-grid>*{grid-column:1!important;grid-row:auto!important}
   .profile-divider{display:none}
