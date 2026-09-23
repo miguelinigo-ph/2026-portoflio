@@ -59,3 +59,45 @@ window.addEventListener('load', () => {
     requestAnimationFrame(() => scrollToHash(window.location.hash, false));
   }
 });
+
+
+const contactForm = document.querySelector('.contact-form');
+const formStatus = document.querySelector('.form-status');
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener('submit', async event => {
+    event.preventDefault();
+
+    const button = contactForm.querySelector('button[type="submit"]');
+    const originalLabel = button.textContent;
+
+    button.disabled = true;
+    button.textContent = 'Sending... →';
+    formStatus.className = 'form-status';
+    formStatus.textContent = '';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Inquiry sent. Thank you!';
+      } else {
+        const data = await response.json().catch(() => null);
+        formStatus.className = 'form-status error';
+        formStatus.textContent = data?.errors?.map(error => error.message).join(' ') || 'Something went wrong. Please try again.';
+      }
+    } catch (error) {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'Something went wrong. Please try again.';
+    } finally {
+      button.disabled = false;
+      button.textContent = originalLabel;
+    }
+  });
+}
