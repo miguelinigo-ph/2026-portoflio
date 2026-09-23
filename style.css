@@ -830,6 +830,7 @@ footer a{text-decoration:none}
   height:20px;
   object-fit:contain;
   display:block;
+  border-radius:4px;
 }
 .idyllic-deliverables{grid-area:deliverables}
 .idyllic-scope{grid-area:scope}
