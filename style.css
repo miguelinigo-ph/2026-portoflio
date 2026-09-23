@@ -337,14 +337,16 @@ footer a{text-decoration:none}
     padding:10px;
   }
   .brand{
-    flex:0 0 auto;
+    flex:0 0 42%;
+    min-width:0;
     font-size:10px;
     line-height:14px;
     gap:6px;
   }
-  .brand-mark{width:10px;height:10px}
+  .brand span{overflow:hidden;text-overflow:clip;white-space:nowrap}
+  .brand-mark{width:10px;height:10px;flex:0 0 10px}
   nav{
-    flex:1 1 auto;
+    flex:1 1 58%;
     min-width:0;
     display:grid;
     grid-template-columns:repeat(3,minmax(0,1fr));
@@ -519,5 +521,63 @@ footer a{text-decoration:none}
   nav{
     gap:3px;
     font-size:8.5px;
+  }
+}
+
+/* Mobile contact form — stacked labels */
+@media(max-width:600px){
+  .contact-grid{row-gap:18px}
+  .contact-copy{font-size:11px;line-height:14px}
+  .contact-form{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+    gap:14px;
+    padding:0;
+  }
+  .contact-form .form-row{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+    gap:6px;
+    grid-column:1!important;
+    grid-row:auto!important;
+  }
+  .contact-form .form-row label,
+  .contact-form .form-row input,
+  .contact-form .form-row textarea,
+  .contact-form .form-row:nth-child(1) label,
+  .contact-form .form-row:nth-child(1) input,
+  .contact-form .form-row:nth-child(2) label,
+  .contact-form .form-row:nth-child(2) input,
+  .contact-form .form-row:nth-child(3) label,
+  .contact-form .form-row:nth-child(3) input,
+  .contact-form .form-row:nth-child(4) label,
+  .contact-form .form-row:nth-child(4) textarea{
+    grid-column:1!important;
+    grid-row:auto!important;
+  }
+  .contact-form .form-row label{
+    height:auto;
+    align-self:auto;
+    display:block;
+    font-size:14px;
+    line-height:20px;
+  }
+  .contact-form .form-row input{
+    height:38px;
+  }
+  .contact-form .form-row textarea{
+    height:140px;
+    min-height:140px;
+  }
+  .contact-form button{
+    grid-column:1!important;
+    grid-row:auto!important;
+    min-height:44px;
+  }
+  .follow-label{
+    grid-column:1!important;
+    grid-row:auto!important;
   }
 }
