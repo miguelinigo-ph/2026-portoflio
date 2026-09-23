@@ -300,7 +300,14 @@ footer a{text-decoration:none}
     padding:10px;
   }
   .hero-title{font-size:44px;line-height:31px}
-  .logo-lockup{height:auto;flex-wrap:wrap}
+  .logo-lockup{
+    height:auto;
+    flex-wrap:wrap;
+    column-gap:0;
+    row-gap:5px;
+  }
+  .hero-heading{margin-top:0}
+  .intro{margin-top:5px}
   .logo-lockup>div:first-child,.logo-lockup>div:last-child{width:100%;height:auto}
   .logo-lockup img{height:auto;max-height:none}
   .hero-meta{height:180px}
