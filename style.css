@@ -441,3 +441,89 @@ footer a{text-decoration:none}
   .contact-form button{grid-column:1;grid-row:auto}
   .follow-label{margin-top:4px}
 }
+
+
+/* Exact Figma layout override — IDYLLIC case study */
+.case-layout{display:grid;grid-template-columns:2fr 1fr;column-gap:10px}
+.case-layout .main-column,.case-layout .profile-column{position:relative;inset:auto;width:auto;height:100%;min-height:0}
+.case-layout .main-column{grid-column:1;overflow-y:auto;padding:10px}
+.case-layout .profile-column{grid-column:2;overflow-y:auto;padding:0 10px 10px}
+.case-layout .case-header{position:absolute;top:0;left:0;right:0;margin:0;width:100%;height:34px;padding:10px;z-index:30}
+.case-layout .idyllic-page{width:100%;height:1580.783px;padding-top:43px;padding-bottom:0;overflow:hidden}
+.case-layout .idyllic-grid{width:100%;height:1537.783px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:69px 596px 151px 285px 285px 151px;column-gap:20px;row-gap:0;grid-template-areas:"number title title title" "hero hero hero panel" "overview overview overview overview" "collage collage member-copy member-copy" "wide wide wide wide" "final identity identity identity"}
+.case-layout .idyllic-number{grid-area:number;margin:0;font-size:63px;line-height:69px;align-self:start}
+.case-layout .idyllic-title{grid-area:title;margin:0;padding:2.5px 0 0;gap:4px;height:69px}
+.case-layout .idyllic-title strong{font-size:32px;line-height:28px;letter-spacing:-.64px}
+.case-layout .idyllic-title span{font-size:14px;line-height:20px}
+.case-layout .idyllic-hero-image{grid-area:hero;width:100%;height:576px;margin:20px 0 0;overflow:hidden}
+.case-layout .idyllic-hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+.case-layout .idyllic-project-panel{grid-area:panel;width:100%;height:427px;margin:20px 0 0}
+.case-layout .idyllic-project-logo{width:162px;height:72px;margin:0 0 20px}
+.case-layout .idyllic-project-logo img{width:162px;height:72px;object-fit:contain;object-position:left top}
+.case-layout .idyllic-project-info{font-size:11px;line-height:14px}
+.case-layout .idyllic-info-block{margin:0 0 21px}
+.case-layout .year-software{height:95px;margin-bottom:22px}
+.case-layout .idyllic-overview{grid-area:overview;width:100%;height:131px;margin:20px 0 0;overflow:hidden}
+.case-layout .idyllic-collage{grid-area:collage;width:100%;height:264.892px;margin:20px 0 0;position:relative;overflow:hidden}
+.case-layout .idyllic-collage .collage-photo{position:absolute;left:-8px;top:0;width:472px;height:265px;display:block;object-fit:cover}
+.case-layout .idyllic-member-copy{grid-area:member-copy;width:100%;height:201px;margin:20px 0 0;overflow:hidden}
+.case-layout .idyllic-wide-collage{grid-area:wide;width:100%;height:264.892px;margin:19.892px 0 0;position:relative;overflow:hidden}
+.case-layout .idyllic-wide-collage .collage-photo{position:absolute;left:353px;top:-69.892px;width:228px;height:405px;display:block;object-fit:cover}
+.case-layout .idyllic-final-copy{grid-area:final;width:100%;height:75px;margin:19.892px 0 0;overflow:hidden}
+.case-layout .idyllic-identity-copy{grid-area:identity;width:100%;height:131px;margin:19.892px 0 0;overflow:hidden}
+.case-layout .contact{margin-top:10px;padding-top:43px;height:606px;box-sizing:border-box}
+.case-layout .contact-grid{width:100%;height:563px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:29px;row-gap:0;min-height:0}
+.case-layout .contact-grid h2{grid-column:1;grid-row:1;margin:0;font-size:32px;line-height:28px}
+.case-layout .contact-kicker{grid-column:2;grid-row:1;margin:0;font-size:14px;line-height:20px}
+.case-layout .contact-copy{grid-column:1 / 3;grid-row:2;margin:0;font-size:11px;line-height:14px}
+.case-layout .contact-form{grid-column:3 / 5;grid-row:2 / span 2;margin:0;display:grid;grid-template-columns:144.056px 288.111px;grid-template-rows:36px 36px 36px 145px 55px;column-gap:10px;row-gap:0}
+.case-layout .follow-label{grid-column:1;grid-row:3;margin:0;font-size:14px;line-height:20px}
+.case-layout .case-profile{height:1061px;padding:0 10px 10px;overflow:hidden}
+.case-layout .case-profile-grid{width:100%;height:1061px;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:10px;row-gap:10px;padding:10px 0 0}
+.case-layout .profile-photo{height:407px;grid-column:1 / -1}
+.case-layout .profile-photo-inner{height:407px}
+.case-layout .profile-photo img{left:-211px;top:-10px;width:700px;height:394px}
+.case-layout .case-profile .profile-section-start{border-top:0;padding-top:0}
+.case-layout .case-profile .profile-section-start + .profile-section-content{border-top:0;padding-top:0}
+.case-layout .case-profile .profile-grid > .profile-section-start{position:relative}
+.case-layout .case-profile .profile-grid > .profile-section-start:before{content:"";position:absolute;top:-10px;left:0;width:100%;border-top:1px solid #000}
+.case-layout .case-profile .profile-grid > .profile-section-content:before{content:"";position:absolute;top:-10px;left:0;width:100%;border-top:1px solid #000}
+.case-layout .case-profile .profile-grid > .profile-section-content{position:relative}
+@media(max-width:900px){
+  .case-layout{display:block}
+  .case-layout .main-column{width:100%;height:100%;padding:10px}
+  .case-layout .case-profile{display:none}
+  .case-layout .idyllic-page{height:auto;padding-top:43px;overflow:visible}
+  .case-layout .idyllic-grid{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;grid-template-areas:"number title" "hero hero" "panel panel" "overview overview" "collage member-copy" "wide wide" "final identity";column-gap:20px;row-gap:0}
+  .case-layout .idyllic-hero-image{height:auto;aspect-ratio:695/576}
+  .case-layout .idyllic-project-panel{height:auto}
+  .case-layout .idyllic-collage,.case-layout .idyllic-wide-collage{height:264.892px}
+  .case-layout .idyllic-collage .collage-photo{left:-8px;top:0;width:472px;height:265px}
+  .case-layout .idyllic-wide-collage .collage-photo{left:50%;top:-69.892px;transform:translateX(-50%);width:228px;height:405px}
+}
+@media(max-width:600px){
+  .case-layout .case-header{height:42px}
+  .case-layout .case-header-inner{height:22px}
+  .case-layout .idyllic-page{padding-top:43px}
+  .case-layout .idyllic-grid{grid-template-columns:1fr;grid-template-areas:"number" "title" "hero" "panel" "overview" "collage" "member-copy" "wide" "final" "identity"}
+  .case-layout .idyllic-number{font-size:64px;line-height:54px}
+  .case-layout .idyllic-title{height:auto;padding-top:0;margin-bottom:18px}
+  .case-layout .idyllic-title strong{font-size:25px;line-height:25px}
+  .case-layout .idyllic-title span{font-size:12px;line-height:18px}
+  .case-layout .idyllic-hero-image{margin-top:0;margin-bottom:18px}
+  .case-layout .idyllic-project-panel{margin:0 0 18px}
+  .case-layout .idyllic-overview{height:auto;margin:0 0 18px}
+  .case-layout .idyllic-collage,.case-layout .idyllic-wide-collage{height:265px;margin:0 0 18px}
+  .case-layout .idyllic-collage .collage-photo{left:-8px;top:0;width:472px;height:265px;transform:none}
+  .case-layout .idyllic-wide-collage .collage-photo{left:50%;top:-69.892px;width:228px;height:405px;transform:translateX(-50%)}
+  .case-layout .idyllic-member-copy,.case-layout .idyllic-final-copy,.case-layout .idyllic-identity-copy{height:auto;margin:0 0 18px;overflow:visible}
+  .case-layout .contact{height:auto;margin-top:0;padding-top:30px}
+  .case-layout .contact-grid{height:auto;grid-template-columns:1fr;row-gap:18px}
+  .case-layout .contact-grid h2,.case-layout .contact-kicker,.case-layout .contact-copy,.case-layout .contact-form,.case-layout .follow-label{grid-column:1;grid-row:auto}
+  .case-layout .contact-form{display:grid;grid-template-columns:1fr;grid-template-rows:auto;gap:14px}
+  .case-layout .form-row{display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;gap:6px;grid-column:1!important;grid-row:auto!important}
+  .case-layout .form-row label{padding:0;font-size:11px;line-height:14px}
+  .case-layout .form-row input,.case-layout .form-row textarea{height:30px}
+  .case-layout .form-row textarea{height:125px}
+  .case-layout .contact-form button{grid-column:1;grid-row:auto}
+}
