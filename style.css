@@ -41,9 +41,12 @@ button,input,textarea{font:inherit}
   top:-10px;
   width:100%;
   height:34px;
-  margin:-10px -10px -34px;
+  margin:-10px -10px -24px;
   padding:10px;
   background:var(--bg);
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  align-items:center;
 }
 .case-header-inner{
   height:19px;
@@ -53,6 +56,7 @@ button,input,textarea{font:inherit}
   align-items:center;
 }
 .brand{
+  grid-column:1;
   display:flex;
   align-items:center;
   gap:16px;
@@ -72,6 +76,7 @@ button,input,textarea{font:inherit}
   text-decoration:none;
 }
 nav{
+  grid-column:2 / 5;
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:29px;
@@ -149,8 +154,9 @@ nav a{text-decoration:none}
   line-height:20px;
   font-weight:500;
 }
-.works{
+ .works{
   height:1029px;
+  margin-top:10px;
   padding-top:43px;
   overflow:hidden;
 }
@@ -185,9 +191,9 @@ nav a{text-decoration:none}
   margin-bottom:0;
 }
 .work-card{min-width:0}
-.work-01{grid-area:work01}
-.work-02{grid-area:work02}
-.work-03{grid-area:work03}
+.work-01{grid-area:work01;height:421px;overflow:hidden}
+.work-02{grid-area:work02;height:342px;overflow:hidden}
+.work-03{grid-area:work03;height:342px;overflow:hidden}
 .work-04,.work-05,.work-06{display:none}
 .work-image{
   position:relative;
@@ -517,13 +523,16 @@ nav a{text-decoration:none}
 .contact{
   margin-top:10px;
   padding-top:43px;
+  height:606px;
+  box-sizing:border-box;
 }
 .contact-grid{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
   column-gap:20px;
   row-gap:20px;
-  min-height:606px;
+  height:563px;
+  min-height:0;
 }
 .contact-grid h2{
   grid-column:1;
