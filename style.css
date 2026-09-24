@@ -649,7 +649,9 @@ footer a{text-decoration:none}
   .idyllic-collage,.idyllic-wide-collage{height:265px}
 }
 @media(max-width:600px){
-  .site-header{height:42px;margin:-10px -10px -42px}
+  .site-header{height:42px;margin:-10px -10px -32px;display:flex;align-items:center;gap:12px}
+  .site-header .brand{grid-column:auto;flex:0 0 42%;min-width:0}
+  .site-header nav{grid-column:auto;flex:1 1 58%;min-width:0}
   .case-header-inner{height:22px}
   .brand{font-size:10px;line-height:14px;gap:6px}
   .brand-mark{width:10px;height:10px}
