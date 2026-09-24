@@ -855,3 +855,59 @@ footer a{text-decoration:none}
   height:auto;
   max-width:96px;
 }
+
+/* Rebuild IDYLLIC profile as a naturally scrolling column */
+.case-layout .case-profile{
+  height:auto;
+  min-height:100%;
+  padding:0 10px 10px;
+  overflow:visible;
+}
+.case-layout .case-profile-grid{
+  width:100%;
+  height:auto;
+  min-height:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:10px;
+  row-gap:10px;
+  padding:10px 0 0;
+  align-content:start;
+}
+.case-layout .case-profile-grid > .profile-photo{
+  grid-column:1 / -1;
+  height:407px;
+  min-height:407px;
+}
+.case-layout .case-profile-grid > .label,
+.case-layout .case-profile-grid > .content{
+  align-self:start;
+  min-width:0;
+}
+.case-layout .case-profile-grid > .profile-section-start{
+  border-top:0;
+  padding-top:0;
+  min-height:20px;
+}
+.case-layout .case-profile-grid > .profile-section-content{
+  border-top:0;
+  padding-top:0;
+}
+.case-layout .case-profile-grid > .profile-section-start:before,
+.case-layout .case-profile-grid > .profile-section-content:before{
+  content:"";
+  display:block;
+  width:100%;
+  border-top:1px solid var(--line);
+  margin-bottom:10px;
+}
+.case-layout .case-profile-grid > .profile-section-start:before{
+  margin-top:-10px;
+}
+.case-layout .case-profile-grid > .profile-section-content:before{
+  margin-top:-10px;
+}
+.case-layout .case-profile-grid .spacer-line{
+  height:20px;
+  line-height:20px;
+}
