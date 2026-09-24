@@ -508,20 +508,12 @@ footer a{text-decoration:none}
 .case-layout .idyllic-wide-collage .collage-photo{position:absolute;left:353px;top:-69.892px;width:228px;height:405px;display:block;object-fit:cover}
 .case-layout .idyllic-final-copy{grid-area:final;width:100%;height:75px;margin:19.892px 0 0;overflow:hidden}
 .case-layout .idyllic-identity-copy{grid-area:identity;width:100%;height:131px;margin:19.892px 0 0;overflow:hidden}
-.case-layout .contact{margin-top:10px;padding-top:43px;height:606px;box-sizing:border-box}
-.case-layout .contact-grid{width:100%;height:563px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:29px;row-gap:0;min-height:0}
-.case-layout .contact-grid h2{grid-column:1;grid-row:1;margin:0;font-size:32px;line-height:28px}
-.case-layout .contact-kicker{grid-column:2;grid-row:1;margin:0;font-size:14px;line-height:20px}
-.case-layout .contact-copy{grid-column:1 / 3;grid-row:2;margin:0;font-size:11px;line-height:14px}
-.case-layout .contact-form{grid-column:3 / 5;grid-row:2 / span 2;margin:0;display:grid;grid-template-columns:144.056px 288.111px;grid-template-rows:36px 36px 36px 145px 55px;column-gap:10px;row-gap:0}
-.case-layout .follow-label{grid-column:1;grid-row:3;margin:0;font-size:14px;line-height:20px}
-.case-layout .case-profile{height:1061px;padding:0 10px 10px;overflow:hidden}
-.case-layout .case-profile-grid{width:100%;height:1061px;grid-template-columns:minmax(0,1fr) minmax(0,2fr);column-gap:10px;row-gap:10px;padding:10px 0 0}
+.case-layout .case-profile{height:auto;min-height:100%;padding:0 10px 10px;overflow:visible}
+.case-layout .case-profile-grid{width:100%;height:auto;min-height:100%;grid-template-columns:minmax(0,1fr) minmax(0,2fr);column-gap:10px;row-gap:10px;padding:10px 0 0}
 .case-layout .profile-photo{height:407px;grid-column:1 / -1}
 .case-layout .profile-photo-inner{height:407px}
 .case-layout .profile-photo img{left:-211px;top:-10px;width:700px;height:394px}
 .case-layout .case-profile .profile-section-start{border-top:1px solid var(--line);padding-top:10px}
-.case-layout .case-profile .profile-section-start + .profile-section-content,
 .case-layout .case-profile .profile-section-start + .content{border-top:1px solid var(--line);padding-top:10px}
 @media(max-width:900px){
   .case-layout{display:block}
@@ -551,15 +543,6 @@ footer a{text-decoration:none}
   .case-layout .idyllic-collage .collage-photo{left:-8px;top:0;width:472px;height:265px;transform:none}
   .case-layout .idyllic-wide-collage .collage-photo{left:50%;top:-69.892px;width:228px;height:405px;transform:translateX(-50%)}
   .case-layout .idyllic-member-copy,.case-layout .idyllic-final-copy,.case-layout .idyllic-identity-copy{height:auto;margin:0 0 18px;overflow:visible}
-  .case-layout .contact{height:auto;margin-top:0;padding-top:30px}
-  .case-layout .contact-grid{height:auto;grid-template-columns:1fr;row-gap:18px}
-  .case-layout .contact-grid h2,.case-layout .contact-kicker,.case-layout .contact-copy,.case-layout .contact-form,.case-layout .follow-label{grid-column:1;grid-row:auto}
-  .case-layout .contact-form{display:grid;grid-template-columns:1fr;grid-template-rows:auto;gap:14px}
-  .case-layout .form-row{display:grid;grid-template-columns:1fr;grid-template-rows:auto auto;gap:6px;grid-column:1!important;grid-row:auto!important}
-  .case-layout .form-row label{padding:0;font-size:11px;line-height:14px}
-  .case-layout .form-row input,.case-layout .form-row textarea{height:30px}
-  .case-layout .form-row textarea{height:125px}
-  .case-layout .contact-form button{grid-column:1;grid-row:auto}
 }
 
 /* Figma source-of-truth refinement */
