@@ -567,10 +567,4 @@ footer a{text-decoration:none}
 .case-layout .idyllic-member-copy{grid-column:3;}
 .case-layout .idyllic-final-copy{grid-column:1}
 .case-layout .idyllic-identity-copy{grid-column:2 / span 2}
-.case-layout .contact-grid{column-gap:29px}
-.case-layout .contact-grid h2{font-size:32px;line-height:28px;letter-spacing:-.64px;font-weight:500}
-.case-layout .contact-kicker{font-size:14px;line-height:20px;font-weight:500}
-.case-layout .contact-copy{font-size:11px;line-height:14px}
-.case-layout .contact-form .form-row label{font-size:14px;line-height:20px}
-.case-layout .contact-form .form-row input,.case-layout .contact-form .form-row textarea{font-size:11px;line-height:14px}
 @media(max-width:600px){.case-layout .idyllic-number{font-size:64px;line-height:54px;letter-spacing:0}.case-layout .idyllic-title strong{font-size:25px;line-height:25px;letter-spacing:-.64px}.case-layout .idyllic-title span{font-size:12px;line-height:18px}.case-layout .idyllic-project-panel{display:block;height:auto}.case-layout .idyllic-project-info{height:auto;display:block}.case-layout .idyllic-info-block{margin-bottom:18px}}
