@@ -901,3 +901,22 @@ footer a{text-decoration:none}
   height:20px;
   line-height:20px;
 }
+
+/* Final IDYLLIC profile divider cleanup */
+.case-layout .case-profile .case-profile-grid > .profile-section-start{
+  border-top:1px solid var(--line);
+  padding-top:10px;
+}
+.case-layout .case-profile .case-profile-grid > .profile-section-content{
+  border-top:1px solid var(--line);
+  padding-top:10px;
+}
+.case-layout .case-profile .case-profile-grid > .profile-section-start:before,
+.case-layout .case-profile .case-profile-grid > .profile-section-content:before{
+  display:none!important;
+  content:none!important;
+}
+.case-layout .case-profile .case-profile-grid > .profile-section-start + .profile-section-content{
+  border-top:1px solid var(--line);
+  padding-top:10px;
+}
