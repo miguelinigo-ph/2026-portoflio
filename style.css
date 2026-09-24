@@ -527,3 +527,33 @@ footer a{text-decoration:none}
   .case-layout .form-row textarea{height:125px}
   .case-layout .contact-form button{grid-column:1;grid-row:auto}
 }
+
+/* Figma source-of-truth refinement */
+.case-layout .idyllic-number{font-size:96px;line-height:28px;letter-spacing:-1.92px;font-weight:700;display:flex;align-items:center;height:69px}
+.case-layout .idyllic-title strong{font-size:40px;line-height:28px;letter-spacing:-2px;font-weight:700}
+.case-layout .idyllic-title span{font-size:20px;line-height:28px;letter-spacing:-.4px;font-weight:500}
+.case-layout .idyllic-title{gap:0}
+.case-layout .idyllic-project-panel{height:499px;margin-top:0;display:flex;flex-direction:column;gap:22px}
+.case-layout .idyllic-project-logo{margin:0;height:72px;flex:0 0 72px}
+.case-layout .idyllic-project-info{height:427px;display:flex;flex-direction:column;gap:22px}
+.case-layout .idyllic-info-block{margin:0}
+.case-layout .year-software{height:95px;flex:0 0 95px;margin:0}
+.case-layout .idyllic-info-block h3{font-size:14px;line-height:20px;font-weight:500}
+.case-layout .idyllic-info-block p{font-size:11px;line-height:14px}
+.case-layout .idyllic-info-block .meta-subhead{margin-top:0}
+.case-layout .software-icons{margin-top:1px}
+.case-layout .idyllic-overview h3,.case-layout .idyllic-member-copy h3,.case-layout .idyllic-final-copy h3,.case-layout .idyllic-identity-copy h3{font-size:14px;line-height:20px;margin:0 0 0;font-weight:500}
+.case-layout .idyllic-overview p,.case-layout .idyllic-member-copy p,.case-layout .idyllic-final-copy p,.case-layout .idyllic-identity-copy p{font-size:11px;line-height:14px}
+.case-layout .idyllic-collage .collage-photo{left:calc(50% - 236px);top:0;width:472px;height:265px;object-fit:cover}
+.case-layout .idyllic-wide-collage .wide-photo-wrap{position:absolute;width:228px;height:405px;left:calc(50% - 114px);top:calc(50% - 202.5px);overflow:hidden}
+.case-layout .idyllic-wide-collage .wide-photo-wrap .collage-photo{position:absolute;left:0;top:13.87%;width:228px;height:70.21%;object-fit:fill}
+.case-layout .idyllic-member-copy{grid-column:3;}
+.case-layout .idyllic-final-copy{grid-column:1}
+.case-layout .idyllic-identity-copy{grid-column:2 / span 2}
+.case-layout .contact-grid{column-gap:29px}
+.case-layout .contact-grid h2{font-size:32px;line-height:28px;letter-spacing:-.64px;font-weight:500}
+.case-layout .contact-kicker{font-size:14px;line-height:20px;font-weight:500}
+.case-layout .contact-copy{font-size:11px;line-height:14px}
+.case-layout .contact-form .form-row label{font-size:14px;line-height:20px}
+.case-layout .contact-form .form-row input,.case-layout .contact-form .form-row textarea{font-size:11px;line-height:14px}
+@media(max-width:600px){.case-layout .idyllic-number{font-size:64px;line-height:54px;letter-spacing:0}.case-layout .idyllic-title strong{font-size:25px;line-height:25px;letter-spacing:-.64px}.case-layout .idyllic-title span{font-size:12px;line-height:18px}.case-layout .idyllic-project-panel{display:block;height:auto}.case-layout .idyllic-project-info{height:auto;display:block}.case-layout .idyllic-info-block{margin-bottom:18px}}
