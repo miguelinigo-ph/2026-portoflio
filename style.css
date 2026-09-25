@@ -4231,24 +4231,3 @@ footer a:hover{opacity:.55}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
 }
-
-
-/* IDYLLIC carousel */
-.idyllic-carousel{width:100%;margin:0 0 24px;overflow:hidden}
-.idyllic-carousel-viewport{width:100%;overflow:hidden;background:var(--soft,#e9e9e9)}
-.idyllic-carousel-track{display:flex;width:100%;transform:translate3d(0,0,0);will-change:transform}
-.idyllic-carousel-slide{flex:0 0 100%;width:100%;margin:0}
-.idyllic-carousel-slide img{display:block;width:100%;height:auto;aspect-ratio:695/316;object-fit:cover}
-.idyllic-carousel-slide:nth-child(2) img{aspect-ratio:auto;object-fit:contain}
-.idyllic-carousel-slide figcaption{margin-top:7px;padding:0 1px;font-size:10px;line-height:14px;opacity:.6}
-.idyllic-carousel-controls{display:flex;align-items:center;justify-content:space-between;height:40px;border-bottom:1px solid var(--line);border-top:1px solid var(--line);margin-top:10px}
-.carousel-arrow{width:40px;height:40px;border:0;background:transparent;color:var(--text);font:inherit;cursor:pointer;padding:0}
-.carousel-arrow:hover{background:var(--text);color:var(--bg)}
-.carousel-status{font-size:10px;line-height:14px;letter-spacing:.5px}
-.idyllic-carousel:focus{outline:none}
-.idyllic-carousel:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-@media(max-width:600px){
-  .idyllic-carousel-controls{height:36px}
-  .carousel-arrow{width:36px;height:36px}
-  .idyllic-carousel-slide img,.idyllic-carousel-slide:nth-child(2) img{aspect-ratio:auto;object-fit:contain}
-}
