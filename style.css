@@ -3974,3 +3974,61 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     object-fit:cover!important;
   }
 }
+
+
+/* IDYLLIC Figma member-profile visuals */
+@media (min-width:901px){
+  .case-layout .idyllic-profile-carousel{
+    position:relative!important;
+    width:695px!important;
+    height:316px!important;
+    overflow:hidden!important;
+    align-self:start!important;
+  }
+  .case-layout .idyllic-profile-carousel > img{
+    display:block!important;
+    width:695px!important;
+    height:316px!important;
+    object-fit:contain!important;
+  }
+  .case-layout .idyllic-profile-wide{
+    width:695px!important;
+    height:331px!important;
+    margin:0!important;
+    overflow:hidden!important;
+    align-self:start!important;
+  }
+  .case-layout .idyllic-profile-wide img{
+    display:block!important;
+    width:695px!important;
+    height:331px!important;
+    object-fit:contain!important;
+  }
+}
+@media (max-width:900px){
+  .case-layout .idyllic-profile-carousel{
+    width:100%!important;
+    height:auto!important;
+    margin:0 0 26px!important;
+    overflow:hidden!important;
+  }
+  .case-layout .idyllic-profile-carousel > img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
+  .case-layout .idyllic-profile-wide{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:695/331!important;
+    margin:0 0 26px!important;
+    overflow:hidden!important;
+  }
+  .case-layout .idyllic-profile-wide img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+  }
+}
