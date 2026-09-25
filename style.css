@@ -2484,3 +2484,68 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     order:6;
   }
 }
+
+
+/* Mobile contact typography — match the intended weight hierarchy */
+@media (max-width:600px){
+  .contact-grid h2,
+  .case-layout .contact-grid h2{
+    font-weight:500;
+  }
+
+  .contact-kicker,
+  .case-layout .contact-kicker{
+    font-weight:500;
+  }
+
+  .contact-copy,
+  .contact-copy p,
+  .case-layout .contact-copy,
+  .case-layout .contact-copy p{
+    font-weight:400;
+  }
+
+  .contact-copy strong,
+  .case-layout .contact-copy strong{
+    font-weight:500;
+  }
+
+  .follow-label,
+  .case-layout .follow-label{
+    font-weight:500;
+  }
+
+  .follow-links,
+  .follow-links a,
+  .case-layout .follow-links,
+  .case-layout .follow-links a{
+    font-weight:400;
+  }
+
+  .follow-links .follow-name,
+  .case-layout .follow-links .follow-name{
+    font-weight:500;
+  }
+
+  .follow-links .follow-handle,
+  .case-layout .follow-links .follow-handle{
+    font-weight:400;
+  }
+
+  .contact-form .form-row label,
+  .case-layout .contact-form .form-row label{
+    font-weight:500;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .case-layout .contact-form input,
+  .case-layout .contact-form textarea{
+    font-weight:400;
+  }
+
+  .contact-form button,
+  .case-layout .contact-form button{
+    font-weight:500;
+  }
+}
