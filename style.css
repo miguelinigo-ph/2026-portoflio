@@ -2470,3 +2470,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     height:auto;
   }
 }
+
+
+/* Mobile contact order — FOLLOW ME before the form */
+@media (max-width:600px){
+  .contact-grid .follow-block,
+  .case-layout .contact-grid .follow-block{
+    order:5;
+  }
+
+  .contact-grid .contact-form,
+  .case-layout .contact-grid .contact-form{
+    order:6;
+  }
+}
