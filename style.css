@@ -752,10 +752,39 @@ footer a{text-decoration:none}
   .case-layout .main-column{width:100%;height:100%;padding:10px}
   .case-layout .case-profile{display:none}
   .case-layout .idyllic-page{height:auto;padding-top:43px;overflow:visible}
-  .case-layout .idyllic-grid{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;grid-template-areas:"number title" "hero hero" "panel panel" "overview overview" "collage member-copy" "wide wide" "final identity";column-gap:20px;row-gap:0}
-  .case-layout .idyllic-hero-image{height:auto;aspect-ratio:695/576}
-  .case-layout .idyllic-project-panel{height:auto}
-  .case-layout .idyllic-collage,.case-layout .idyllic-wide-collage{height:264.892px}
+  .case-layout .idyllic-grid{
+    height:auto;
+    width:100%;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+      "number"
+      "title"
+      "hero"
+      "panel"
+      "overview"
+      "collage"
+      "member-copy"
+      "wide"
+      "final"
+      "identity";
+    column-gap:0;
+    row-gap:0;
+  }
+  .case-layout .idyllic-number{font-size:72px;line-height:60px;margin-bottom:10px}
+  .case-layout .idyllic-title{height:auto;padding-top:0;margin-bottom:18px}
+  .case-layout .idyllic-title strong{font-size:32px;line-height:32px}
+  .case-layout .idyllic-title span{font-size:14px;line-height:20px}
+  .case-layout .idyllic-hero-image{
+    width:100%;
+    height:auto;
+    aspect-ratio:695/576;
+    margin:0 0 18px;
+  }
+  .case-layout .idyllic-project-panel{width:100%;height:auto;margin:0 0 18px}
+  .case-layout .idyllic-project-logo{margin-bottom:18px}
+  .case-layout .idyllic-overview{height:auto;margin:0 0 18px}
+  .case-layout .idyllic-collage,.case-layout .idyllic-wide-collage{height:264.892px;margin:0 0 18px}
   .case-layout .idyllic-collage .collage-photo{left:-8px;top:0;width:472px;height:265px}
   .case-layout .idyllic-wide-collage .collage-photo{left:50%;top:-69.892px;transform:translateX(-50%);width:228px;height:405px}
 }
