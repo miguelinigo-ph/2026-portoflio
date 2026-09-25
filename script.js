@@ -104,43 +104,37 @@ if (contactForm && formStatus) {
 }
 
 
-/* IDYLLIC member photo strip — fixed phone, horizontal photos */
-document.querySelectorAll('[data-profile-carousel]').forEach(carousel => {
-  const strip = carousel.querySelector('.profile-strip');
-  const photos = [...carousel.querySelectorAll('.profile-strip img')];
+/* IDYLLIC member-profile carousel */
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+  const track = carousel.querySelector('.idyllic-carousel-track');
+  const slides = [...carousel.querySelectorAll('.idyllic-carousel-slide')];
   const prev = carousel.querySelector('.carousel-prev');
   const next = carousel.querySelector('.carousel-next');
   const current = carousel.querySelector('.carousel-current');
 
-  if (!strip || photos.length < 2) return;
+  if (!track || slides.length < 2) return;
 
   let index = 0;
   let startX = 0;
   let startY = 0;
 
-  function stepSize() {
-    const photo = photos[0];
-    const gap = parseFloat(getComputedStyle(strip).gap) || 0;
-    return photo.getBoundingClientRect().width + gap;
-  }
-
   function render(nextIndex, animate = true) {
-    index = (nextIndex + photos.length) % photos.length;
-    const viewport = carousel.querySelector('.profile-strip-viewport');
-    const center = viewport.clientWidth / 2;
-    const photoCenter = photos[index].offsetLeft + photos[index].offsetWidth / 2;
-    const x = center - photoCenter;
-
-    strip.style.transition = animate && !prefersReducedMotion
+    index = (nextIndex + slides.length) % slides.length;
+    track.style.transition = animate && !prefersReducedMotion
       ? 'transform 420ms cubic-bezier(.22,1,.36,1)'
       : 'none';
-    strip.style.transform = `translate3d(${x}px,0,0)`;
-
+    track.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
     if (current) current.textContent = String(index + 1).padStart(2, '0');
   }
 
   prev.addEventListener('click', () => render(index - 1));
   next.addEventListener('click', () => render(index + 1));
+
+  carousel.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); render(index - 1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); render(index + 1); }
+  });
 
   carousel.addEventListener('touchstart', event => {
     startX = event.changedTouches[0].clientX;
@@ -155,6 +149,5 @@ document.querySelectorAll('[data-profile-carousel]').forEach(carousel => {
     }
   }, {passive:true});
 
-  window.addEventListener('resize', () => render(index, false));
   render(0, false);
 });
