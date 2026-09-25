@@ -1627,3 +1627,815 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   html{scroll-behavior:auto}
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+
+/* =========================================================
+   MOBILE REFINEMENT — spacing, type scale, section proportions
+   ========================================================= */
+@media (max-width: 900px){
+  .main-column{
+    padding:12px;
+  }
+
+  .hero{
+    gap:12px;
+  }
+
+  .hero-title{
+    min-height:88px;
+    font-size:clamp(44px,10.5vw,58px);
+    line-height:.68;
+  }
+
+  .logo-lockup{
+    min-height:96px;
+    gap:14px;
+  }
+
+  .logo-lockup>div:first-child{
+    width:57%;
+  }
+
+  .logo-lockup>div:last-child{
+    width:43%;
+  }
+
+  .hero-heading{
+    min-height:42px;
+    font-size:27px;
+    line-height:27px;
+  }
+
+  .intro{
+    min-height:64px;
+    font-size:17px;
+    line-height:21px;
+  }
+
+  .hero-meta{
+    min-height:0;
+    padding-top:18px;
+    padding-bottom:12px;
+    column-gap:20px;
+    row-gap:22px;
+  }
+
+  .hero-meta p{
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .hero-meta strong{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .works{
+    margin-top:12px;
+    padding-top:34px;
+  }
+
+  .works-grid{
+    column-gap:20px;
+    row-gap:26px;
+  }
+
+  .works-intro{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .works-intro .medium{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .work-info{
+    margin-top:8px;
+  }
+
+  .work-info h3{
+    font-size:18px;
+    line-height:23px;
+    letter-spacing:-.25px;
+  }
+
+  .work-info p{
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .work-card>a{
+    margin-top:8px;
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .contact{
+    padding-top:44px;
+  }
+
+  .contact-grid{
+    row-gap:22px;
+  }
+
+  .contact-grid h2{
+    font-size:30px;
+    line-height:28px;
+  }
+
+  .contact-kicker{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .contact-copy,
+  .contact-copy p{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .contact-copy strong{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .contact-form{
+    gap:16px;
+  }
+
+  .form-row{
+    gap:7px;
+  }
+
+  .form-row label{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .form-row input{
+    height:34px;
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .form-row textarea{
+    height:132px;
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .contact-form button{
+    height:42px;
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .follow-label{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .follow-links,
+  .follow-links a{
+    font-size:12px;
+    line-height:16px;
+  }
+
+  footer{
+    margin-top:28px;
+    padding:16px 0 28px;
+  }
+
+  /* IDYLLIC tablet */
+  .case-layout .main-column{
+    padding:12px;
+  }
+
+  .case-layout .idyllic-page{
+    height:auto;
+    padding-top:34px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-grid{
+    height:auto;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:20px;
+  }
+
+  .case-layout .idyllic-number{
+    font-size:76px;
+    line-height:60px;
+    height:60px;
+  }
+
+  .case-layout .idyllic-title{
+    height:auto;
+    min-height:60px;
+    padding-top:0;
+  }
+
+  .case-layout .idyllic-title strong{
+    font-size:30px;
+    line-height:28px;
+    letter-spacing:-1px;
+  }
+
+  .case-layout .idyllic-title span{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .case-layout .idyllic-hero-image{
+    margin-top:20px;
+    margin-bottom:0;
+    height:auto;
+    aspect-ratio:695/576;
+  }
+
+  .case-layout .idyllic-project-panel{
+    margin-top:20px;
+    height:auto;
+  }
+
+  .case-layout .idyllic-project-info{
+    height:auto;
+  }
+
+  .case-layout .idyllic-info-block{
+    margin-bottom:18px;
+  }
+
+  .case-layout .idyllic-info-block h3{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .case-layout .idyllic-info-block p{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .idyllic-overview{
+    height:auto;
+    margin-top:24px;
+  }
+
+  .case-layout .idyllic-overview h3,
+  .case-layout .idyllic-member-copy h3,
+  .case-layout .idyllic-final-copy h3,
+  .case-layout .idyllic-identity-copy h3{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .case-layout .idyllic-overview p,
+  .case-layout .idyllic-member-copy p,
+  .case-layout .idyllic-final-copy p,
+  .case-layout .idyllic-identity-copy p{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .idyllic-collage,
+  .case-layout .idyllic-wide-collage{
+    height:auto;
+    aspect-ratio:4/3;
+    margin-top:24px;
+  }
+
+  .case-layout .idyllic-member-copy{
+    height:auto;
+    margin-top:24px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-final-copy,
+  .case-layout .idyllic-identity-copy{
+    height:auto;
+    margin-top:24px;
+    overflow:visible;
+  }
+}
+
+@media (max-width:600px){
+  .main-column{
+    padding:12px;
+  }
+
+  .site-header{
+    height:40px;
+    margin:-12px -12px -28px;
+    padding:10px 12px;
+    gap:10px;
+  }
+
+  .site-header .brand{
+    flex-basis:44%;
+  }
+
+  .brand{
+    font-size:10px;
+    line-height:14px;
+    gap:6px;
+  }
+
+  .brand-mark{
+    width:9px;
+    height:9px;
+  }
+
+  nav{
+    gap:10px;
+    font-size:10px;
+    line-height:14px;
+  }
+
+  .hero{
+    gap:10px;
+  }
+
+  .hero-title{
+    min-height:82px;
+    font-size:clamp(42px,11vw,54px);
+    line-height:.7;
+  }
+
+  .logo-lockup{
+    min-height:92px;
+    gap:10px;
+  }
+
+  .logo-lockup>div:first-child{
+    width:56%;
+  }
+
+  .logo-lockup>div:last-child{
+    width:44%;
+  }
+
+  .hero-heading{
+    min-height:40px;
+    font-size:24px;
+    line-height:24px;
+  }
+
+  .intro{
+    min-height:66px;
+    font-size:16px;
+    line-height:20px;
+  }
+
+  .hero-meta{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    padding-top:14px;
+    padding-bottom:10px;
+    column-gap:16px;
+    row-gap:20px;
+  }
+
+  .hero-meta p{
+    font-size:11px;
+    line-height:15px;
+  }
+
+  .hero-meta strong{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .works{
+    margin-top:10px;
+    padding-top:30px;
+  }
+
+  .works-grid{
+    grid-template-columns:1fr;
+    grid-template-areas:"heading" "intro" "work01" "work02";
+    row-gap:24px;
+  }
+
+  .works-grid>h2{
+    font-size:27px;
+    line-height:27px;
+  }
+
+  .works-intro{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .works-intro .medium{
+    font-size:13px;
+    line-height:18px;
+  }
+
+  .work-01-image{
+    aspect-ratio:933/342;
+  }
+
+  .work-02-image{
+    aspect-ratio:452/268;
+  }
+
+  .work-info{
+    margin-top:8px;
+  }
+
+  .work-info h3{
+    font-size:17px;
+    line-height:22px;
+  }
+
+  .work-info p{
+    font-size:11px;
+    line-height:15px;
+  }
+
+  .work-card>a{
+    margin-top:8px;
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .contact{
+    padding:42px 0 0;
+  }
+
+  .contact-grid{
+    row-gap:20px;
+  }
+
+  .contact-grid h2{
+    font-size:28px;
+    line-height:27px;
+  }
+
+  .contact-kicker{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .contact-copy,
+  .contact-copy p{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .contact-copy strong{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .contact-form{
+    gap:15px;
+  }
+
+  .form-row{
+    gap:6px;
+  }
+
+  .form-row label{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .form-row input{
+    height:34px;
+    padding:7px 9px;
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .form-row textarea{
+    height:126px;
+    padding:7px 9px;
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .contact-form button{
+    height:40px;
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .follow-label{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .follow-links,
+  .follow-links a{
+    font-size:11px;
+    line-height:15px;
+  }
+
+  footer{
+    margin-top:24px;
+    padding:14px 0 24px;
+    font-size:10px;
+    line-height:14px;
+  }
+
+  /* IDYLLIC mobile */
+  .case-layout .main-column{
+    padding:12px;
+  }
+
+  .case-layout .case-header{
+    height:40px;
+    padding:10px 12px;
+    margin:-12px 0 -28px;
+  }
+
+  .case-layout .idyllic-page{
+    height:auto;
+    padding-top:34px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-grid{
+    height:auto;
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "number"
+      "title"
+      "hero"
+      "panel"
+      "overview"
+      "collage"
+      "member-copy"
+      "wide"
+      "final"
+      "identity";
+    column-gap:0;
+  }
+
+  .case-layout .idyllic-number{
+    height:auto;
+    margin:0 0 8px;
+    font-size:58px;
+    line-height:52px;
+    letter-spacing:-1px;
+  }
+
+  .case-layout .idyllic-title{
+    min-height:0;
+    margin:0 0 20px;
+    padding:0;
+    gap:2px;
+  }
+
+  .case-layout .idyllic-title strong{
+    font-size:24px;
+    line-height:24px;
+    letter-spacing:-.5px;
+  }
+
+  .case-layout .idyllic-title span{
+    font-size:11px;
+    line-height:16px;
+  }
+
+  .case-layout .idyllic-hero-image{
+    width:100%;
+    height:auto;
+    aspect-ratio:4/3;
+    margin:0 0 24px;
+  }
+
+  .case-layout .idyllic-project-panel{
+    margin:0 0 24px;
+    height:auto;
+    display:block;
+  }
+
+  .case-layout .idyllic-project-logo{
+    width:140px;
+    height:62px;
+    margin:0 0 18px;
+  }
+
+  .case-layout .idyllic-project-logo img{
+    width:140px;
+    height:62px;
+  }
+
+  .case-layout .idyllic-project-info{
+    height:auto;
+    display:block;
+  }
+
+  .case-layout .idyllic-info-block{
+    margin:0 0 18px;
+  }
+
+  .case-layout .year-software{
+    height:auto;
+    margin:0 0 18px;
+  }
+
+  .case-layout .idyllic-info-block h3{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .idyllic-info-block p{
+    font-size:11px;
+    line-height:16px;
+  }
+
+  .case-layout .software-icons{
+    margin-top:2px;
+    gap:3px;
+  }
+
+  .case-layout .software-icons img{
+    width:19px;
+    height:19px;
+  }
+
+  .case-layout .idyllic-overview{
+    height:auto;
+    margin:0 0 24px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-overview h3,
+  .case-layout .idyllic-member-copy h3,
+  .case-layout .idyllic-final-copy h3,
+  .case-layout .idyllic-identity-copy h3{
+    margin:0 0 6px;
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .idyllic-overview p,
+  .case-layout .idyllic-member-copy p,
+  .case-layout .idyllic-final-copy p,
+  .case-layout .idyllic-identity-copy p{
+    font-size:11px;
+    line-height:16px;
+  }
+
+  .case-layout .idyllic-overview p + p{
+    margin-top:14px;
+  }
+
+  .case-layout .idyllic-collage,
+  .case-layout .idyllic-wide-collage{
+    width:100%;
+    height:auto;
+    aspect-ratio:4/3;
+    margin:0 0 24px;
+  }
+
+  .case-layout .idyllic-collage .collage-photo{
+    left:-2%;
+    top:0;
+    width:104%;
+    height:100%;
+  }
+
+  .case-layout .idyllic-member-copy{
+    height:auto;
+    margin:0 0 24px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-member-copy p + p{
+    margin-top:14px;
+  }
+
+  .case-layout .idyllic-wide-collage .wide-photo-wrap{
+    width:58%;
+    height:100%;
+    left:21%;
+    top:0;
+  }
+
+  .case-layout .idyllic-wide-collage .wide-photo-wrap .collage-photo{
+    left:0;
+    top:13.87%;
+    width:100%;
+    height:70.21%;
+  }
+
+  .case-layout .idyllic-final-copy,
+  .case-layout .idyllic-identity-copy{
+    height:auto;
+    margin:0 0 24px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-identity-copy p + p{
+    margin-top:14px;
+  }
+
+  .case-layout .contact{
+    height:auto;
+    margin-top:0;
+    padding:42px 0 0;
+    overflow:visible;
+  }
+
+  .case-layout .contact-grid{
+    height:auto;
+    grid-template-columns:1fr;
+    row-gap:20px;
+  }
+
+  .case-layout .contact-grid h2,
+  .case-layout .contact-kicker,
+  .case-layout .contact-copy,
+  .case-layout .contact-form,
+  .case-layout .follow-block{
+    grid-column:1;
+    grid-row:auto;
+  }
+
+  .case-layout .contact-grid h2{
+    font-size:28px;
+    line-height:27px;
+  }
+
+  .case-layout .contact-kicker{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .contact-copy,
+  .case-layout .contact-copy p{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .contact-copy strong{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .contact-form{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+    gap:15px;
+    padding:0;
+  }
+
+  .case-layout .form-row{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+    gap:6px;
+    grid-column:1!important;
+    grid-row:auto!important;
+  }
+
+  .case-layout .form-row label{
+    height:auto;
+    padding:0;
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .form-row input{
+    height:34px;
+    padding:7px 9px;
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .case-layout .form-row textarea{
+    height:126px;
+    padding:7px 9px;
+    font-size:12px;
+    line-height:16px;
+  }
+
+  .case-layout .contact-form button{
+    grid-column:1;
+    grid-row:auto;
+    height:40px;
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .follow-block{
+    width:100%;
+    margin:0;
+  }
+
+  .case-layout .follow-label{
+    font-size:12px;
+    line-height:17px;
+  }
+
+  .case-layout .follow-links,
+  .case-layout .follow-links a{
+    font-size:11px;
+    line-height:15px;
+  }
+}
