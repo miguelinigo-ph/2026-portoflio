@@ -2439,3 +2439,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     line-height:15px;
   }
 }
+
+
+/* Follow links — match reference weight hierarchy */
+.follow-label,
+.case-layout .follow-label{
+  font-weight:500;
+}
+.follow-links a,
+.case-layout .follow-links a{
+  font-weight:400;
+  text-decoration:none;
+}
+.follow-links .follow-name,
+.case-layout .follow-links .follow-name{
+  font-weight:500;
+}
+.follow-links .follow-handle,
+.case-layout .follow-links .follow-handle{
+  font-weight:400;
+  text-decoration:underline;
+}
