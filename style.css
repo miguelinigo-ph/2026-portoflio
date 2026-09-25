@@ -623,6 +623,22 @@ footer{
 }
 footer a{text-decoration:none}
 
+/* Contact typography matches homepage mobile */
+@media(max-width:900px){
+  .case-layout .contact-grid h2,
+  .case-layout .contact-kicker,
+  .case-layout .follow-label,
+  .case-layout .contact-form .form-row label,
+  .case-layout .contact-form button{
+    font-weight:500;
+  }
+  .case-layout .contact-copy,
+  .case-layout .contact-form input,
+  .case-layout .contact-form textarea{
+    font-weight:400;
+  }
+}
+
 @media(max-width:900px){
   .main-column{width:100%!important}
   .case-profile{display:none}
