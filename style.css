@@ -2549,3 +2549,274 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     font-weight:500;
   }
 }
+
+
+/* =========================================================
+   CASE STUDY MOBILE — final responsive composition
+   ========================================================= */
+@media (max-width:600px){
+  .case-layout .main-column{
+    padding:12px;
+  }
+
+  .case-layout .case-header{
+    position:sticky;
+    top:-12px;
+    height:40px;
+    margin:-12px 0 -24px;
+    padding:10px 12px;
+  }
+
+  .case-layout .case-header-inner{
+    height:20px;
+  }
+
+  .case-layout .brand,
+  .case-layout .back-link{
+    font-size:10px;
+    line-height:14px;
+  }
+
+  .case-layout .idyllic-page{
+    width:100%;
+    height:auto;
+    padding:30px 0 0;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-grid{
+    width:100%;
+    height:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "number"
+      "title"
+      "hero"
+      "panel"
+      "overview"
+      "collage"
+      "member-copy"
+      "wide"
+      "final"
+      "identity";
+    column-gap:0;
+    row-gap:0;
+  }
+
+  .case-layout .idyllic-number{
+    height:auto;
+    margin:0 0 6px;
+    font-size:56px;
+    line-height:50px;
+    letter-spacing:-1px;
+    font-weight:700;
+  }
+
+  .case-layout .idyllic-title{
+    height:auto;
+    min-height:0;
+    margin:0 0 18px;
+    padding:0;
+    gap:3px;
+  }
+
+  .case-layout .idyllic-title strong{
+    font-size:23px;
+    line-height:24px;
+    letter-spacing:-.45px;
+    font-weight:700;
+  }
+
+  .case-layout .idyllic-title span{
+    font-size:11px;
+    line-height:16px;
+    letter-spacing:0;
+    font-weight:500;
+  }
+
+  .case-layout .idyllic-hero-image{
+    width:100%;
+    height:auto;
+    aspect-ratio:695/576;
+    margin:0 0 24px;
+  }
+
+  .case-layout .idyllic-project-panel{
+    width:100%;
+    height:auto;
+    margin:0 0 26px;
+    display:block;
+  }
+
+  .case-layout .idyllic-project-logo{
+    width:140px;
+    height:62px;
+    margin:0 0 18px;
+  }
+
+  .case-layout .idyllic-project-logo img{
+    width:140px;
+    height:62px;
+  }
+
+  .case-layout .idyllic-project-info{
+    width:100%;
+    height:auto;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:18px;
+    row-gap:20px;
+  }
+
+  .case-layout .idyllic-info-block{
+    min-width:0;
+    margin:0;
+  }
+
+  .case-layout .year-software{
+    height:auto;
+    margin:0;
+  }
+
+  .case-layout .idyllic-info-block:nth-child(4){
+    grid-column:1 / -1;
+  }
+
+  .case-layout .idyllic-info-block h3{
+    margin:0;
+    font-size:12px;
+    line-height:17px;
+    font-weight:500;
+  }
+
+  .case-layout .idyllic-info-block p{
+    margin:0;
+    font-size:11px;
+    line-height:16px;
+    font-weight:400;
+  }
+
+  .case-layout .software-icons{
+    margin-top:3px;
+    gap:3px;
+  }
+
+  .case-layout .software-icons img{
+    width:18px;
+    height:18px;
+  }
+
+  .case-layout .idyllic-overview{
+    width:100%;
+    height:auto;
+    margin:0 0 26px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-overview h3,
+  .case-layout .idyllic-member-copy h3,
+  .case-layout .idyllic-final-copy h3,
+  .case-layout .idyllic-identity-copy h3{
+    margin:0 0 7px;
+    font-size:12px;
+    line-height:17px;
+    font-weight:500;
+  }
+
+  .case-layout .idyllic-overview p,
+  .case-layout .idyllic-member-copy p,
+  .case-layout .idyllic-final-copy p,
+  .case-layout .idyllic-identity-copy p{
+    margin:0;
+    font-size:11px;
+    line-height:16px;
+    font-weight:400;
+  }
+
+  .case-layout .idyllic-overview p + p,
+  .case-layout .idyllic-member-copy p + p,
+  .case-layout .idyllic-identity-copy p + p{
+    margin-top:14px;
+  }
+
+  /* Keep collage proportions close to the desktop composition. */
+  .case-layout .idyllic-collage{
+    width:100%;
+    height:auto;
+    aspect-ratio:472/265;
+    margin:0 0 26px;
+    overflow:hidden;
+  }
+
+  .case-layout .idyllic-collage .collage-photo{
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .case-layout .idyllic-member-copy{
+    width:100%;
+    height:auto;
+    margin:0 0 26px;
+    overflow:visible;
+  }
+
+  .case-layout .idyllic-wide-collage{
+    width:100%;
+    height:auto;
+    aspect-ratio:933/265;
+    margin:0 0 26px;
+    overflow:hidden;
+  }
+
+  .case-layout .idyllic-wide-collage .wide-photo-wrap{
+    position:absolute;
+    width:24.44%;
+    height:152.83%;
+    left:37.78%;
+    top:-26.42%;
+    overflow:hidden;
+  }
+
+  .case-layout .idyllic-wide-collage .wide-photo-wrap .collage-photo{
+    left:0;
+    top:13.87%;
+    width:100%;
+    height:70.21%;
+    object-fit:fill;
+  }
+
+  .case-layout .idyllic-final-copy,
+  .case-layout .idyllic-identity-copy{
+    width:100%;
+    height:auto;
+    margin:0 0 26px;
+    overflow:visible;
+  }
+
+  .case-layout .contact{
+    margin-top:0;
+    padding:42px 0 0;
+    height:auto;
+    overflow:visible;
+  }
+
+  .case-layout .contact-grid{
+    width:100%;
+    height:auto;
+    grid-template-columns:1fr;
+    row-gap:20px;
+  }
+
+  .case-layout .contact-grid h2,
+  .case-layout .contact-kicker,
+  .case-layout .contact-copy,
+  .case-layout .contact-form,
+  .case-layout .follow-block{
+    grid-column:1;
+    grid-row:auto;
+  }
+}
