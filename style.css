@@ -2460,3 +2460,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   font-weight:400;
   text-decoration:underline;
 }
+
+
+/* Mobile selected works — use one consistent thumbnail ratio */
+@media (max-width:600px){
+  .work-01-image,
+  .work-02-image{
+    aspect-ratio:452/268;
+    height:auto;
+  }
+}
