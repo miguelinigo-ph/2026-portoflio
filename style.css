@@ -1556,3 +1556,74 @@ footer a{text-decoration:none}
   background:transparent;
   color:#0063b2;
 }
+
+/* =========================================================
+   SITE POLISH — visual consistency, accessibility, responsive UX
+   ========================================================= */
+:root{--accent:#0063b2;--focus:rgba(0,99,178,.22)}
+html{scroll-padding-top:44px}
+body{background:var(--bg);color:var(--text)}
+::selection{background:var(--accent);color:#fff}
+.skip-link{position:fixed;left:10px;top:10px;z-index:100;padding:8px 10px;background:var(--accent);color:#fff;text-decoration:none;transform:translateY(-160%);transition:transform .2s ease}
+.skip-link:focus{transform:translateY(0)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.work-card > a{color:var(--accent)!important;background:transparent!important;border:0!important;box-shadow:none!important;display:inline!important;width:auto!important;min-height:0!important;padding:0!important;margin-top:10px;text-decoration:none;transition:color .2s ease,opacity .2s ease}
+.work-card > a:hover{color:var(--accent)!important;opacity:.65}
+.contact-form button{background:var(--accent)!important;color:#f5f5f5!important;border:0!important;transition:opacity .2s ease,transform .2s ease}
+.contact-form button:hover:not(:disabled){opacity:.82}
+.contact-form button:active:not(:disabled){transform:translateY(1px)}
+.contact-form button:disabled{cursor:wait;opacity:.55}
+.form-status{margin:8px 0 0;font-size:11px;line-height:14px}
+.form-status.success{display:block;color:var(--accent)}
+.form-status.error{display:block;color:#8b1e1e}
+.work-image img,.idyllic-hero-image img,.collage-photo,.wide-photo-wrap img,.profile-photo img{backface-visibility:hidden}
+#home,#works,#contact{scroll-margin-top:44px}
+@media (min-width:901px) and (max-width:1200px){
+  .intro{width:min(627px,100%)}
+  .logo-lockup{gap:20px}
+  .logo-lockup>div:first-child{width:min(514.197px,55%)}
+  .logo-lockup>div:last-child{width:min(370.261px,40%)}
+}
+@media (max-width:900px){
+  body{overflow:auto}
+  .layout{position:relative;inset:auto;overflow:visible}
+  .main-column{position:relative;top:auto;bottom:auto;height:auto;min-height:100vh;overflow:visible}
+  .profile-column{display:none!important}
+  .hero{height:auto;min-height:0}
+  .hero-title{height:auto;min-height:90px;flex:0 0 auto;font-size:clamp(44px,9vw,63px);line-height:.58}
+  .logo-lockup{height:auto;min-height:100px;flex:0 0 auto;align-items:flex-end}
+  .hero-heading{height:auto;min-height:46px;flex:0 0 auto}
+  .intro{width:100%;height:auto;min-height:58px;flex:0 0 auto}
+  .hero-meta{height:auto;min-height:200px;flex:0 0 auto}
+  .works{height:auto;min-height:0;overflow:visible}
+  .works-grid{grid-template-areas:"heading intro" "work01 work01" "work02 work02";grid-template-columns:repeat(2,minmax(0,1fr))}
+  .work-03,.work-04,.work-05,.work-06{display:none}
+  .work-01,.work-02{height:auto;overflow:visible}
+  .work-01-image{height:auto;aspect-ratio:933/342}
+  .work-02-image{height:auto;aspect-ratio:452/268}
+  .contact{height:auto;min-height:606px;overflow:visible}
+  .contact-grid{height:auto;min-height:0}
+  footer{margin-top:20px}
+}
+@media (max-width:600px){
+  html{scroll-padding-top:48px}
+  #home,#works,#contact{scroll-margin-top:48px}
+  .main-column{padding:10px}
+  .site-header{position:sticky;top:-10px}
+  .hero-title{min-height:74px;font-size:clamp(40px,11vw,58px);line-height:.58}
+  .logo-lockup{gap:12px;overflow:hidden}
+  .logo-lockup>div:first-child{width:58%;height:auto;aspect-ratio:514.197/102.67}
+  .logo-lockup>div:last-child{width:42%;height:auto;aspect-ratio:370.261/122.606}
+  .hero-heading{font-size:26px;line-height:26px}
+  .intro{font-size:16px;line-height:20px}
+  .hero-meta{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;min-height:0;padding-bottom:20px}
+  .works-grid{grid-template-columns:1fr;grid-template-areas:"heading" "intro" "work01" "work02";row-gap:20px}
+  .works-grid>h2{font-size:28px;line-height:28px}
+  .work-info h3{font-size:17px;line-height:23px}
+  .contact{min-height:0}
+  footer{font-size:10px;line-height:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
