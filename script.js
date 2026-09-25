@@ -1,3 +1,4 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const mainColumn = document.querySelector('.main-column');
 const profileColumn = document.querySelector('.profile-column');
 
@@ -32,7 +33,7 @@ function scrollToHash(hash, smooth = true) {
 
   result.container.scrollTo({
     top: result.top,
-    behavior: smooth ? 'smooth' : 'auto'
+    behavior: smooth && !prefersReducedMotion ? 'smooth' : 'auto'
   });
 }
 
@@ -49,7 +50,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     history.pushState(null, '', hash);
     result.container.scrollTo({
       top: result.top,
-      behavior: 'smooth'
+      behavior: prefersReducedMotion ? 'auto' : 'smooth'
     });
   });
 });
@@ -72,7 +73,7 @@ if (contactForm && formStatus) {
     const originalLabel = button.textContent;
 
     button.disabled = true;
-    button.textContent = 'Sending... →';
+    button.textContent = 'Sending…';
     formStatus.className = 'form-status';
     formStatus.textContent = '';
 
