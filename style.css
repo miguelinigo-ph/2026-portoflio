@@ -1533,3 +1533,26 @@ footer a{text-decoration:none}
   .contact-form button,.case-layout .contact-form button{grid-column:1;grid-row:auto;height:40px}
   .follow-block,.case-layout .follow-block{grid-column:1;grid-row:auto;width:212px}
 }
+
+
+/* View Case Study links — text links, not buttons */
+.work-card > a{
+  display:inline;
+  width:auto;
+  min-height:0;
+  box-sizing:border-box;
+  margin-top:10px;
+  padding:0;
+  background:transparent;
+  color:#0063b2;
+  border:0;
+  border-radius:0;
+  text-decoration:none;
+  font-size:14px;
+  line-height:20px;
+  font-weight:500;
+}
+.work-card > a:hover{
+  background:transparent;
+  color:#0063b2;
+}
